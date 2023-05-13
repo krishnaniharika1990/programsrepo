@@ -1,5 +1,8 @@
 hii
 <<<<<<< HEAD
+world
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 world
 =======
@@ -8,3 +11,4 @@ hello
 =======
 
 >>>>>>> 57a98ac108b829bcb7553a43b488d70189ec60ba
+>>>>>>> origin/master
