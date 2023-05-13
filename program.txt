@@ -1,2 +1,6 @@
 hii
+<<<<<<< HEAD
+world
+=======
 hello
+>>>>>>> origin/master
