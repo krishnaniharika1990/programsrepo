@@ -1,0 +1,75 @@
+package com.songs;
+
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+public class UserInputs {
+
+	String S1 = "";
+	String S2 = "";
+	String S3 = "";
+	String S4 = "";
+
+	ArrayList<String> user1 = new ArrayList<String>();
+	Scanner songInput = new Scanner(System.in);
+
+	public void inputSongs() {
+
+		System.out.println("enter first song name");
+		S1 = songInput.nextLine();
+		System.out.println("enter second song name");
+		S2 = songInput.nextLine();
+		System.out.println("enter third song name");
+		S3 = songInput.nextLine();
+		System.out.println("enter fourth song name");
+		S4 = songInput.nextLine();
+
+		user1.add(S1);
+		user1.add(S2);
+		user1.add(S3);
+
+		System.out.println(user1.size());
+
+	}
+
+	public void userPlaylist() {
+
+		Map<String, ArrayList<String>> addSongs = new LinkedHashMap<String, ArrayList<String>>();
+
+		addSongs.put("User1", user1);
+
+		if (user1.size() <= 3) {
+
+			user1.add(S4);
+			user1.remove(S1);
+		}
+
+		System.out.println(addSongs);
+
+		System.out.println("enter song name");
+		S4 = songInput.nextLine();
+
+		if (user1.size() <= 3) {
+
+			user1.add(S4);
+			user1.remove(S2);
+		}
+
+		System.out.println(addSongs);
+
+		System.out.println("enter song name");
+		S4 = songInput.nextLine();
+
+		if (user1.size() <= 3) {
+
+			user1.add(S4);
+			user1.remove(S3);
+
+		}
+		System.out.println(addSongs);
+
+	}
+
+}
